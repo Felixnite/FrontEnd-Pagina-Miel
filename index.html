@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar__box">
+      <a href="#">
+        <img src="./img-miel/bee-logo.png" class="navbar__logo" alt="bee-logo">
+      </a>
+
+      <div class="navbar__icons">
+        <div class="dropdown">
+          <button class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
+              width="35" height="35" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 6l16 0" />
+              <path d="M4 12l16 0" />
+              <path d="M4 18l16 0" />
+            </svg></button>
+
+        </div>
+
+        <div class="cart__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-bag" width="30"
+            height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+            <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+  <header class="header__container">
+
+    <section class="header__banner">
+
+      <div class="banner__text">
+        <h1>BEE-LOVED GOODS</h1>
+        <p>For your body, home, and mind.</p>
+      </div>
+      <div class="button__header">
+        <a href="#">SHOP NOW</a>
+      </div>
+    </section>
+  </header>
+  <main class="container"></main>
+
+  <section class="must__haves" style="position: relative; z-index: 1;">
+    <h1 class="must__title">Bee Must Haves</h1>
+    <div class="carousel-container"
+      style="position: relative; z-index: 3; background: rgb(255, 255, 255); height: 25rem; width: 25rem; margin: 20px auto; overflow: hidden;">
+      <input type="radio" id="tab1" name="tabs" checked>
+      <input type="radio" id="tab2" name="tabs">
+      <input type="radio" id="tab3" name="tabs">
+      <input type="radio" id="tab4" name="tabs">
+  
+      <!-- Navigation Buttons -->
+      <label for="tab1" class="back-button" style="left: 0;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M10 6l-6 6 6 6" />
+        </svg>
+      </label>
+      <label for="tab2" class="forward-button" style="right: 0;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M14 6l6 6-6 6" />
+        </svg>
+      </label>
+  
+      <!-- Carousel Items -->
+      <div class="container1"
+        style="position: absolute; height: 100%; width: 100%; z-index: 1; display: flex; justify-content: center; align-items: center; transition: left 0.3s ease-in-out;">
+        <div class="card-container">
+          <div class="card">
+            <img src="img-miel/Honey-Habanero-Flavor.jpg" class="honey-habanero">
+            <div class="card-text">
+              <h2>Honey Habanero Flavor</h2>
+              <p>$10.95</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container2"
+        style="position: absolute; height: 100%; width: 100%; z-index: 1; display: flex; justify-content: center; align-items: center; transition: left 0.3s ease-in-out;">
+        <div class="card-container">
+          <div class="card">
+            <img src="img-miel/GloryBee-Tea-Blossom-Bee-Pollen-Powder.jpg" class="pollen-powder" alt="">
+            <div class="card-text">
+              <h2>Wildflower Bee Pollen Granules</h2>
+              <p>$15.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container3"
+        style="position: absolute; height: 100%; width: 100%; z-index: 1; display: flex; justify-content: center; align-items: center; transition: left 0.3s ease-in-out;">
+        <div class="card-container">
+          <div class="card">
+            <img src="img-miel/Chesapeake-Milk-Honey-Glass-Candle.jpg" alt="">
+            <div class="card-text">
+              <h2>Chesapeake Milk & Honey Glass Candle</h2>
+              <p>$22.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container4"
+        style="position: absolute; height: 100%; width: 100%; z-index: 1; display: flex; justify-content: center; align-items: center; transition: left 0.3s ease-in-out;">
+        <div class="card-container">
+          <div class="card">
+            <img src="img-miel/Pure-Beeswax-Pillars-Natural.jpg" alt="">
+            <div class="card-text">
+              <h2>Pure Beeswax Pillars Natural</h2>
+              <p>$10.50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="explore" style="position: relative; z-index: 0; margin: 1rem 1rem;">
+    <div class="first__row">
+      <div class="explore__honey">
+        <img src="img-miel/Honey-Wellness.png" class="honey__explore__img" alt="">
+        <div class="honey__text">
+          <h1 class="honey__title">Honey Wellness</h1>
+          <p>Bee loved by our collection of curated honey products</p>
+          <a href="#"><button class="honey__explore__btn">Explore</button></a>
+        </div>
+      </div>
+      <div class="explore__scents">
+        <img src="img-miel/Good-Reads-Scents.png" class="scents__explore__img" alt="">
+        <div class="scents__text">
+          <h1 class="scents__title">GOOD READS & SCENTS</h1>
+          <p>Our offering extends from books to candles</p>
+          <a href="#"><button class="scents__explore__btn">Explore</button></a>
+        </div>
+      </div>
+      <div class="explore__home">
+        <img src="img-miel/Home-Sweet-Home.png" class="home__explore__img" alt="">
+        <div class="home__text">
+          <h1 class="home__title">HOME SWEET HOME</h1>
+          <p>Hand-crafted with premium ingredients</p>
+          <a href="#"><button class="home__explore__btn">Explore</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="explore__soap">
+      <img src="img-miel/Honey-Soap.png" class="soap__explore__img" alt="">
+      <div class="soap__text">
+        <h1 class="soap__title">HONEY SOAP</h1>
+        <p>Hand-crafted with premium ingredients</p>
+        <a href="#"><button class="soap__explore__btn">Explore</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="text">
+      <h1 class="about__title">About bee & co.</h1>
+      <p class="about__text">Nobody works harder than the bee. Nature’s meticulous workers have provided civilizations
+        with a resource and
+        function that rivals the ingenuity of humans - Bee & Co. has taken inspiration from these mighty little
+        creatures
+        and curated a well-rounded collection of products that promote natural and wholesome well-being.</br></br>
+        Bee & Co. provides a unique customer experience by offering unique items that apply to everyone's interest in
+        some
+        form or another - from healing remedies to culinary uses as well as home goods and self-care.
+      </p>
+      <img class="about__img" src="img-miel/About-Bee-Co_.png" alt="">
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="links">
+      <div class="first__links">
+        <a href="">home</a>
+        <a href="">Return policy</a>
+        <a href="">testimonial disclaimmer</a>
+
+      </div>
+      <div class="second__links">
+        <a href="">shipping policy</a>
+        <a href="">privacy policy</a>
+      </div>
+    </div>
+    <div class="warnings">
+      <h3>ALL BEE & CO. RETAIL LOCATIONS ARE INDEPENDENTLY OWNED AND MANAGED.</h3>
+      <p class="warnings__text">*Manufacturer Warning: For your safety, never purchase Bee & Co. products from
+        unauthorized online sellers. Unauthorized products may be used, expired or counterfeit and present a serious
+        health risk. To report unauthorized sales or confirm the authenticity of your product, please contact us. </p>
+      <p>Copyright &copy; 2024 Bee & Co </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Downloads/solitas-serif"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FrontEnd Pagina Miel"
+	}
+}

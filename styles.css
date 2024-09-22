@@ -1,0 +1,626 @@
+/* Global Styles */
+:root{
+  --main-brown: #34211f;
+  --second-brown: rgba(52,33,31,0.2);
+  --btn-gray: rgba(255,255,255,0.2);
+  --footer-yellow: #a2703a;
+  --font:"Poppins", sans-serif;
+  --text-font:'Solitass Serif Norm', serif;
+}
+
+@font-face {
+  font-family: 'Solitas Serif Norm';
+  src: url('solitas-serif/solitasserifnormregular.otf') format('opentype');
+}
+
+
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cart__icon {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.navbar__logo {
+  margin: 0.5rem 0.5rem;
+}
+
+.navbar__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* HEADER */
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.header__banner {
+  background: url(./img-miel/Bee-Inspired-Goods-Banner-MOBILE.jpg);
+  margin: 0;
+  width: 100%;
+  max-height: 30rem;
+  min-height: 26.5rem;
+  background-size: cover;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+.banner__text {
+  text-align: center;
+  text-align: left;
+  font-family: var(--text-font);
+  font-size: 1.07rem;
+}
+
+.banner__text h1 {
+  margin: 5px 0;
+  font-size: 2.2rem;
+  font-family: var(--font);
+  font-weight: 500;
+  color: var(--main-brown);
+}
+
+.button__header {
+  border: 1px solid var(--second-brown);
+  background-color: var(--main-brown);
+  padding: 0.5rem 0.6rem;
+  width: 8.5rem;
+  margin-top: 1.5rem;
+}
+
+.button__header a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font);
+}
+
+/* Bee Must Haves */
+
+.must__haves {
+  margin-bottom: 20px;
+  /* Add some space between the carousel and explore section */
+  position: relative;
+  /* Ensure it has a defined position */
+  z-index: 1;
+  /* Ensure it has a higher z-index */
+}
+
+.must__title {
+  text-align: center;
+  font-family: var(--font);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  color: var(--main-brown);
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  background: rgb(255, 255, 255);
+  height: 25rem;
+  width: 25rem;
+  margin: 20px auto;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.carousel-container input {
+  display: none;
+}
+
+.container1,
+.container2,
+.container3,
+.container4 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease-in-out;
+  left: 100%; /* Default position */
+  margin-left: 1.5rem;
+}
+
+/* Ensure all containers are visible when checked */
+#tab1:checked ~ .container1 {
+  left: 0%;
+  z-index: 2;
+}
+
+#tab2:checked ~ .container1 {
+  left: 100%;
+}
+
+#tab3:checked ~ .container1 {
+  left: 200%;
+}
+
+#tab4:checked ~ .container1 {
+  left: 300%;
+}
+
+#tab1:checked ~ .container2 {
+  left: 100%;
+}
+
+#tab2:checked ~ .container2 {
+  left: 0%;
+  z-index: 2;
+}
+
+#tab3:checked ~ .container2 {
+  left: 100%;
+}
+
+#tab4:checked ~ .container2 {
+  left: 200%;
+}
+
+#tab1:checked ~ .container3 {
+  left: 200%;
+}
+
+#tab2:checked ~ .container3 {
+  left: 100%;
+}
+
+#tab3:checked ~ .container3 {
+  left: 0%;
+  z-index: 2;
+}
+
+#tab4:checked ~ .container3 {
+  left: 100%;
+}
+
+#tab1:checked ~ .container4 {
+  left: 300%;
+}
+
+#tab2:checked ~ .container4 {
+  left: 200%;
+}
+
+#tab3:checked ~ .container4 {
+  left: 100%;
+}
+
+#tab4:checked ~ .container4 {
+  left: 0%;
+  z-index: 2;
+}
+
+/* Navigation Buttons */
+.back-button,
+.forward-button {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.342);
+  padding: 0.6rem 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button {
+  left: 0;
+  margin-left: 2.5rem;
+  padding-right: 0.1rem;
+}
+
+.forward-button {
+  right: 0;
+  margin-right: 4.5rem;
+  padding-left: 0.1rem;
+}
+
+.back-button:hover,
+.forward-button:hover {
+  background: rgba(0, 0, 0, 0.637);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  /* padding: 1rem 1rem; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.card-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.card-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text p {
+  font-size: 1.2rem;
+}
+
+
+/* Card Styling */
+.card {
+  background: white;
+  padding: 20px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.card-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text p {
+  font-size: 1.2rem;
+}
+
+/* Ensure all containers are visible when checked */
+#tab1:checked ~ .container1,
+#tab2:checked ~ .container2,
+#tab3:checked ~ .container3,
+#tab4:checked ~ .container4 {
+  left: 0%;
+  z-index: 2;
+}
+
+/* Ensure other containers move off-screen when not checked */
+#tab1:checked ~ .container2,
+#tab2:checked ~ .container3,
+#tab3:checked ~ .container4,
+#tab4:checked ~ .container1 {
+  left: -100%;
+}
+
+#tab1:checked ~ .container3,
+#tab2:checked ~ .container4,
+#tab3:checked ~ .container1,
+#tab4:checked ~ .container2 {
+  left: -200%;
+}
+
+#tab1:checked ~ .container4,
+#tab2:checked ~ .container1,
+#tab3:checked ~ .container2,
+#tab4:checked ~ .container3 {
+  left: -300%;
+}
+
+
+
+.honey-habanero {
+  width: 16.5rem;
+  height: 16.5rem;
+}
+
+.card-text h2{
+  font-family: var(--font);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--main-brown);
+}
+
+.card-text p{
+  
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--main-brown);
+}
+
+.pollen-powder {
+  width: 16.5rem;
+  height: 16.5rem;
+}
+
+/* Explore Section*/
+
+.explore {
+  position: relative;
+  /* Ensure it has a defined position */
+  z-index: 0;
+  /* Lower z-index to ensure it is behind the carousel */
+  margin: 1rem 1rem;
+}
+
+.honey__explore__img {
+  max-width: 100%;
+  min-width: 15.6rem;
+  width: 23rem;
+  height: 23.75rem;
+  object-fit: cover;
+}
+
+.explore__honey {
+  position: relative;
+  display: inline-block;
+}
+
+.honey__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.honey__text p{
+  width: 15rem;
+}
+
+.explore__scents {
+  position: relative;
+  display: inline-block;
+}
+
+.scents__explore__img {
+  max-width: 100%;
+  min-width: 15.6rem;
+  width: 23rem;
+  height: 23.75rem;
+  object-fit: cover;
+}
+
+.scents__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14rem;
+  text-align: center;
+  color: white;
+}
+
+.explore__home {
+  position: relative;
+  display: inline-block;
+}
+
+.home__explore__img {
+  max-width: 100%;
+  min-width: 15.6rem;
+  width: 23rem;
+  height: 23.75rem;
+  object-fit: cover;
+}
+
+.home__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  text-align: center;
+  color: white;
+}
+
+.explore__soap {
+  position: relative;
+  display: inline-block;
+}
+
+.soap__explore__img {
+  max-width: 100%;
+  min-width: 15.6rem;
+  width: 23rem;
+  height: 27.5rem;
+  object-fit: cover;
+}
+
+.soap__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  text-align: center;
+  color: var(--main-brown);
+}
+
+.explore__honey,
+.explore__scents,
+.explore__home,
+.explore__soap {
+  margin-top: 1rem;
+}
+
+.explore__honey p,
+.explore__scents p,
+.explore__home p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.honey__title,
+.scents__title,
+.home__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  letter-spacing: 0.09rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.honey__explore__btn,
+.scents__explore__btn,
+.home__explore__btn {
+  background-color: rgba(255, 255, 255, 0.979);
+  color: var(--main-brown);
+  border: none;
+  padding: 0.8rem 1.7rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
+}
+
+.soap__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  letter-spacing: 0.09rem;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.soap__explore__btn {
+  background-color: var(--main-brown);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.8rem 1.7rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.explore__soap p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+
+.about {
+  width: 25rem;
+  max-width: 100%;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-top: 0;
+}
+
+.about__img {
+  width: 100%;
+  height: auto;
+}
+
+.about__title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.about__text {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: var(--footer-yellow);
+  padding-top: 1rem;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two equal columns */
+  gap: 2rem;
+  /* Optional gap between columns */
+  margin: 1rem 2rem;
+}
+
+/* Stack links vertically within each column */
+/* Align links to the top of each column */
+.first__links,
+.second__links {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start;  */
+}
+
+.first__links a,
+.second__links a {
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.warnings {
+  padding: 2rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.warnings h3 {
+  margin-bottom: 0.5rem;
+}
+
+.warnings__text {
+  margin-bottom: 1rem;
+  
+}
+
